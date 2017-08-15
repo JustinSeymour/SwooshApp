@@ -9,10 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var Swoosh: UIImageView!
+    @IBOutlet weak var BGbegin: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        Swoosh.frame = CGRect(x: view.frame.size.width / 2 - view.frame.size.width / 2, y: 50 , width: Swoosh.frame.size.width , height: Swoosh.frame.size.width)
+        
+        BGbegin.frame = view.frame;
     }
 
     override func didReceiveMemoryWarning() {
