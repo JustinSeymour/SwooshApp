@@ -171,6 +171,9 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="X9E-GB-S5E" eventType="touchUpInside" id="l2T-nf-sBL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1g-MA-SO6">
                                 <rect key="frame" x="0.0" y="30" width="50" height="50"/>
@@ -205,6 +208,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="04N-Cc-6ld"/>
                     </view>
+                    <connections>
+                        <segue destination="y3i-89-KZC" kind="show" identifier="SkillVCSegue" id="XxF-um-ZAy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmz-iy-AHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="GCB-ak-C0w" userLabel="Exit" sceneMemberID="exit"/>
@@ -267,7 +273,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEt-7X-sqo" customClass="ButtonBorder" customModule="SwooshApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEt-7X-sqo" customClass="ButtonBorder" customModule="SwooshApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="662" width="414" height="54"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.396484375" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -284,13 +290,16 @@
                             <constraint firstItem="ewT-cP-aCI" firstAttribute="top" secondItem="nOM-9o-qVT" secondAttribute="top" id="5eN-h0-clP"/>
                             <constraint firstItem="der-CD-E7v" firstAttribute="trailing" secondItem="Ik5-4U-hYC" secondAttribute="trailing" id="60v-cu-Zzr"/>
                             <constraint firstItem="ewT-cP-aCI" firstAttribute="leading" secondItem="der-CD-E7v" secondAttribute="leading" id="7Fu-xX-Pgw"/>
+                            <constraint firstItem="LEt-7X-sqo" firstAttribute="trailing" secondItem="der-CD-E7v" secondAttribute="trailing" id="9j8-LO-8hd"/>
                             <constraint firstItem="ewT-cP-aCI" firstAttribute="bottom" secondItem="der-CD-E7v" secondAttribute="bottom" id="AWy-CD-bGW"/>
                             <constraint firstItem="Ik5-4U-hYC" firstAttribute="top" secondItem="uGX-dS-0p0" secondAttribute="bottom" constant="50" id="K0G-kt-jZH"/>
                             <constraint firstItem="uGX-dS-0p0" firstAttribute="top" secondItem="der-CD-E7v" secondAttribute="top" constant="20" id="c6h-sS-RXz"/>
                             <constraint firstItem="der-CD-E7v" firstAttribute="bottom" secondItem="LEt-7X-sqo" secondAttribute="bottom" constant="20" id="i9K-OR-15k"/>
                             <constraint firstItem="der-CD-E7v" firstAttribute="trailing" secondItem="uGX-dS-0p0" secondAttribute="trailing" id="jFX-DU-2yo"/>
                             <constraint firstItem="uGX-dS-0p0" firstAttribute="leading" secondItem="der-CD-E7v" secondAttribute="leading" id="rZs-zX-jgD"/>
+                            <constraint firstItem="der-CD-E7v" firstAttribute="bottom" secondItem="LEt-7X-sqo" secondAttribute="bottom" constant="20" id="tQz-fu-cM7"/>
                             <constraint firstItem="Ik5-4U-hYC" firstAttribute="leading" secondItem="der-CD-E7v" secondAttribute="leading" id="wQ4-ip-Otl"/>
+                            <constraint firstItem="LEt-7X-sqo" firstAttribute="leading" secondItem="der-CD-E7v" secondAttribute="leading" id="wuu-U2-Bh4"/>
                             <constraint firstItem="ewT-cP-aCI" firstAttribute="trailing" secondItem="der-CD-E7v" secondAttribute="trailing" id="zHh-0x-6fL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="der-CD-E7v"/>
