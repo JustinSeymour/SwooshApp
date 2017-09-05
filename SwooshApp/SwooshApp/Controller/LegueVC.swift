@@ -10,25 +10,34 @@ import UIKit
 
 class LegueVC: UIViewController {
     
+    var player: Player!
+    
+    @IBOutlet weak var nextBtn: ButtonBorder!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        player = Player()
     }
-
+    
     @IBAction func onNextTapped(_ sender: Any) {
         performSegue(withIdentifier: "SkillVCSegue", sender: self)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func onMensTapped(_ sender: Any) {
+        selectedLegue(legueType: "Mens")
     }
-    */
-
+    
+    @IBAction func onWomensTapped(_ sender: Any) {
+        selectedLegue(legueType: "Womens")
+    }
+    
+    @IBAction func onCoedTapped(_ sender: Any) {
+        selectedLegue(legueType: "Coed")
+    }
+    
+    func selectedLegue (legueType: String) {
+        player.desiredLeague = legueType
+        nextBtn.isEnabled = true
+    }
 }
